@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace ResultPattern;
 
-public abstract class Result
+public abstract class Result : Result<Object>
 {
-    public abstract ResultTypes ResultType { get; }
-    public abstract IEnumerable<string> Errors { get; }
+    public override object Data => null;
 }
 
 
-public abstract class Result<T> : Result
+public abstract class Result<T>
 {
+    public abstract ResultTypes ResultType { get; }
+    public abstract IEnumerable<string> Errors { get; }
     public abstract T Data { get; }
 }
 

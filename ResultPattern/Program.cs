@@ -1,24 +1,25 @@
 ﻿using ResultPattern;
 
-Result test = new NotFoundResult<bool>("1", "test", "testing");
-Console.WriteLine("Test - Status: " + test.ResultType);
+Result<bool> test = new NotFoundResult<bool>("1", "test", "testing");
+Console.WriteLine("Test 1 - Status: " + test.ResultType);
 foreach(var str in test.Errors)
 {
     Console.WriteLine(str);
 }
-Console.WriteLine("Data: " + ((Result<bool>)test).Data);
+Console.WriteLine("Data: " + test.Data);
 
-Result test2 = new NotFoundResult<int>("23");
-Console.WriteLine("Test - Status: " + test2.ResultType);
+Result<int> test2 = new NotFoundResult<int>("23");
+Console.WriteLine("Test 2 - Status: " + test2.ResultType);
 foreach (var str in test2.Errors)
 {
     Console.WriteLine(str);
 }
-Console.WriteLine("Data: " + ((Result<int>)test2).Data);
+Console.WriteLine("Data: " + test2.Data);
 
-Result test3 = new OkResult<int>(42);
-Console.WriteLine("Test - Status: " + test3.ResultType);
-Console.WriteLine("Data: " + ((Result<int>)test3).Data);
+Result<int> test3 = new OkResult<int>(42);
+Console.WriteLine("Test 3 - Status: " + test3.ResultType);
+Console.WriteLine("Data: " + test3.Data);
 
 Result test4 = new NoContentResult();
-Console.WriteLine("Test - Status: " + test4.ResultType);
+Console.WriteLine("Test 4 - Status: " + test4.ResultType);
+Console.WriteLine("Data: " + test4.Data);
