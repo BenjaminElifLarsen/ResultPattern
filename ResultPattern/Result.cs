@@ -57,3 +57,12 @@ public enum ResultTypes
     NotFound,
     Unexpected,
 }
+
+
+public static class PrintOut
+{
+    public static void SystemOutPrintLn<T>(Result<T> result)
+    {
+        Console.WriteLine("Data: " + result.Data);
+    }
+}
