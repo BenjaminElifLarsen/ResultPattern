@@ -38,7 +38,7 @@ public class NoContentResult : Result
 
 public class NotFoundResult<T> : Result<T>
 {
-    private IEnumerable<string> _errors;
+    private readonly IEnumerable<string> _errors;
     public NotFoundResult(params string[] errors)
     {
         _errors = errors;
