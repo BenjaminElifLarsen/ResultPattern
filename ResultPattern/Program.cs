@@ -2,6 +2,7 @@
 
 Result<bool> test = new NotFoundResult<bool>("1", "test", "testing");
 Console.WriteLine("Test 1 - Status: " + test.ResultType);
+Console.WriteLine("Errors");
 foreach(var str in test.Errors)
 {
     Console.WriteLine(str);
@@ -10,6 +11,7 @@ Console.WriteLine("Data: " + test.Data);
 
 Result<int> test2 = new NotFoundResult<int>("23");
 Console.WriteLine("Test 2 - Status: " + test2.ResultType);
+Console.WriteLine("Errors");
 foreach (var str in test2.Errors)
 {
     Console.WriteLine(str);

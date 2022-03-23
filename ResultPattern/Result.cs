@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ResultPattern;
+﻿namespace ResultPattern;
 
 public abstract class Result : Result<Object>
 {
-    public override object Data => null;
+    public override object Data => default;
 }
 
 
