@@ -51,7 +51,7 @@ public class NotFoundResult<T> : Result<T>
 
     public override ResultTypes ResultType => ResultTypes.NotFound;
     public override IEnumerable<string> Errors => _errors;
-    public override T Data => default(T);
+    public override T Data => default;
 }
 
 public enum ResultTypes
