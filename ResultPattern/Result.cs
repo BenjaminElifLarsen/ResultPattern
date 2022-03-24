@@ -66,3 +66,11 @@ public static class PrintOut
         Console.WriteLine("Data: " + result.Data);
     }
 }
+
+public static class GenericTest
+{
+    public static bool Generic<T>(Result<T> result)
+    {
+        return result.GetType().IsGenericType;
+    }
+}

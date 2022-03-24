@@ -26,5 +26,5 @@ Result test4 = new NoContentResult();
 Console.WriteLine("Test 4 - Status: " + test4.ResultType);
 PrintOut.SystemOutPrintLn(test4);
 
-Console.WriteLine("NoContentResult is generic " + test4.GetType().IsGenericType);
-Console.WriteLine("OkResult is generic " + test3.GetType().IsGenericType);
+Console.WriteLine("NoContentResult, test4, is generic " + GenericTest.Generic(test4));
+Console.WriteLine("OkResult, test3, is generic " + GenericTest.Generic(test3));
